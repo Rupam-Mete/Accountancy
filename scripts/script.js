@@ -1,555 +1,901 @@
 const quizzes = {
-  lesson1: [
-    {
-      question: "What is the correct file extension for Python files?",
-      options: [".py", ".java", ".cpp", ".txt"],
-      answer: 0
-    },
-    {
-      question: "Who developed the Python programming language?",
-      options: ["Dennis Ritchie", "Guido van Rossum", "James Gosling", "Bjarne Stroustrup"],
-      answer: 1
-    },
-    {
-      question: "In which year was Python first released?",
-      options: ["1991", "1985", "2000", "1995"],
-      answer: 0
-    },
-    {
-      question: "Which symbol is used to start a comment in Python?",
-      options: ["//", "#", "--", "/*"],
-      answer: 1
-    },
-    {
-      question: "Which of the following is a valid Python variable name?",
-      options: ["2data", "data-set", "data_set", "data set"],
-      answer: 2
-    },
-    {
-      question: "What will the `print(2 + 3 * 4)` output?",
-      options: ["20", "14", "24", "18"],
-      answer: 1
-    },
-    {
-      question: "Which function is used to output something in Python?",
-      options: ["print()", "echo()", "display()", "show()"],
-      answer: 0
-    },
-    {
-      question: "Which data type is used to store textual data?",
-      options: ["int", "str", "float", "bool"],
-      answer: 1
-    },
-    {
-      question: "What is the output of `type(10)`?",
-      options: ["class 'float'", "class 'str'", "class 'int'", "class 'bool'"],
-      answer: 2
-    },
-    {
-      question: "Which of the following is a correct assignment in Python?",
-      options: ["x == 5", "int x = 5", "x := 5", "x = 5"],
-      answer: 3
-    },
-    {
-      question: "What is the default mode in which Python files are run?",
-      options: ["Compiled", "Scripted", "Interpreted", "Bytecode"],
-      answer: 2
-    },
-    {
-      question: "Which of these is used to take input from the user?",
-      options: ["get()", "input()", "scan()", "read()"],
-      answer: 1
-    },
-    {
-      question: "What is the output of `print('3' + '4')`?",
-      options: ["34", "7", "12", "Error"],
-      answer: 0
-    },
-    {
-      question: "What will the following code print: `print(type(True))`?",
-      options: ["class 'bool'", "class 'int'", "class 'str'", "class 'NoneType'"],
-      answer: 0
-    },
-    {
-      question: "Which of these is not a core Python data type?",
-      options: ["int", "float", "real", "bool"],
-      answer: 2
-    }
+  lesson1: [{
+    question: "অংশীদারী কারবারে ন্যূনতম সদস্য সংখ্যা কত জন হওয়া উচিত?",
+    options: ["১ জন", "২ জন", "৩ জন", "৫ জন"],
+    answer: 1
+  },
+  {
+    question: "অংশীদারী কারবারে সর্বাধিক সদস্য সংখ্যা কত জন হতে পারে?",
+    options: ["২০ জন", "৫০ জন", "১০০ জন", "১৫০ জন"],
+    answer: 2
+  },
+  {
+    question: "ভারতের অংশীদারী আইন কোন সালে কার্যকর হয়?",
+    options: ["১৯২০", "১৯৩২", "১৯৪৭", "১৯৫৬"],
+    answer: 1
+  },
+  {
+    question: "ব্যাংকিং ব্যবসায় সর্বাধিক কতজন অংশীদার থাকতে পারে?",
+    options: ["২০ জন", "১৫ জন", "১০ জন", "৫ জন"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারদের সংজ্ঞা অংশীদারী আইনের কোন ধারায় দেওয়া হয়েছে?",
+    options: ["৪ নং ধারা", "৫ নং ধারা", "৬ নং ধারা", "৭ নং ধারা"],
+    answer: 0
+  },
+  {
+    question: "অংশীদারী কারবার গঠনের মূল ভিত্তি কী?",
+    options: ["মৌখিক চুক্তি", "চুক্তিপত্র", "কর্পোরেট চুক্তি", "বন্ধুত্ব"],
+    answer: 1
+  },
+  {
+    question: "অংশীদারী কারবারে অংশীদারদের দায় কেমন হয়?",
+    options: ["সীমিত", "নির্দিষ্ট", "অসীম", "আংশিক"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারদের মধ্যে কেমন সম্পর্ক থাকে?",
+    options: ["স্নেহের", "সহযোগিতার", "মালিক ও প্রতিনিধির", "পর্যবেক্ষকের"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারী কারবার নিবন্ধন করা কি ধরনের?",
+    options: ["আইনসিদ্ধ", "ঐচ্ছিক", "বাধ্যতামূলক", "নির্বাচনসাপেক্ষ"],
+    answer: 1
+  },
+  {
+    question: "যেখানে অংশীদারদের নাম, ঠিকানা, পুঁজির পরিমাণ, লাভ-ক্ষতি বন্টনের অনুপাত ইত্যাদি উল্লেখ থাকে তাকে কী বলে?",
+    options: ["পরিচয় পত্র", "মৌখিক চুক্তি", "অংশীদারী চুক্তিপত্র", "লাভ-ক্ষতি বিবরণী"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারী চুক্তিপত্রে অনুল্লেখিত বিষয়সমূহ কোন ধারায় নির্ধারিত?",
+    options: ["১০ নং ধারা", "১২ নং ধারা", "১৩ নং ধারা", "১৫ নং ধারা"],
+    answer: 2
+  },
+  {
+    question: "চুক্তিপত্র না থাকলে লাভ-ক্ষতি বণ্টন কেমন হবে?",
+    options: ["সমঝোতা অনুসারে", "যে যার ইচ্ছামতো", "সমানভাবে", "পুঁজির অনুপাতে"],
+    answer: 2
+  },
+  {
+    question: "চুক্তিপত্রে উল্লেখ না থাকলে মূলধনের উপর বার্ষিক কী সুদ পাওয়া যায়?",
+    options: ["৫%", "১০%", "সুদ পাওয়া যায় না", "সুদ পরিশোধ ঐচ্ছিক"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারী চুক্তিপত্রে উল্লেখ না থাকলে ঋণের ওপর বাৎসরিক কত হারে সুদ পাওয়া যায়?",
+    options: ["৮%", "৪%", "৬%", "৫%"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারী চুক্তিপত্র কী রূপ হতে পারে?",
+    options: ["শুধুমাত্র মৌখিক", "শুধুমাত্র লিখিত", "মৌখিক বা লিখিত উভয়ই", "আইনগত নথিপত্রে"],
+    answer: 2
+  },
+  {
+    question: "চুক্তিপত্রে উল্লেখ না থাকলে অংশীদাররা বিনিময়, কমিশন ইত্যাদি পায় কি?",
+    options: ["হ্যাঁ, সবার জন্য সমান", "না, পায় না", "পায় তবে সীমিত", "চুক্তি থাকলে পায়"],
+    answer: 1
+  },
+  {
+    question: "যিনি দৈনন্দিন ব্যবসা পরিচালনা করেন তাকে কী বলা হয়?",
+    options: ["ঘুমন্ত অংশীদার", "সক্রিয় অংশীদার", "নিরব অংশীদার", "সম্পদ অংশীদার"],
+    answer: 1
+  },
+  {
+    question: "যিনি দৈনন্দিন ব্যবসা পরিচালনা করেন না তাকে কী বলা হয়?",
+    options: ["সক্রিয় অংশীদার", "ঘুমন্ত অংশীদার", "সাধারণ অংশীদার", "নির্দেশক"],
+    answer: 1
+  },
+  {
+    question: "১৮ বছরের কম বয়সী অংশীদারকে কী বলা হয়?",
+    options: ["নাবালক অংশীদার", "সাধারণ অংশীদার", "বিকল্প অংশীদার", "পাঠক অংশীদার"],
+    answer: 0
+  },
+  {
+    question: "চুক্তিপত্র না থাকলে তিনজন অংশীদার কীভাবে লাভ-ক্ষতি ভাগ করবেন?",
+    options: ["১:২:৩", "১:১:১", "২:২:১", "যার পুঁজি বেশি"],
+    answer: 1
+  },
+  {
+    question: "চুক্তিপত্রে উল্লেখ না থাকলে মূলধনের ওপর সুদ কিভাবে গণনা হয়?",
+    options: ["১০%", "সুদের ব্যবস্থা নেই", "৬%", "৫%"],
+    answer: 1
+  },
+  {
+    question: "চুক্তিপত্র না থাকলে অংশীদাররা কেবল কোন অর্থে সুদ পান?",
+    options: ["মূলধনে", "লাভের ওপর", "ঋণের ওপর", "ভবিষ্যৎ বিনিয়োগে"],
+    answer: 2
+  },
+  {
+    question: "লাভ-ক্ষতির হিসাব ধারণ করার প্রতিষ্ঠান কী?",
+    options: ["আয়-ব্যয় প্রতিষ্ঠান", "অংশীদারী প্রতিষ্ঠান", "নগদ খাতা", "চুক্তি সংস্থা"],
+    answer: 1
+  },
+  {
+    question: "লাভ-ক্ষতির হিসাবের প্রকৃতি কী ধরনের?",
+    options: ["বাস্তব তহবিল", "মূলধন তহবিল", "নামমাত্র তহবিল", "ব্যয় খাতা"],
+    answer: 2
+  },
+  {
+    question: "লাভ-ক্ষতির হিসাব কখন প্রস্তুত করা হয়?",
+    options: ["বছরের শুরুতে", "প্রতিদিন", "লাভ-ক্ষতি হিসাবের শেষে", "মাসের শেষে"],
+    answer: 2
+  },
+  {
+    question: "মূলধনের ওপর সুদ কী ধরনের খরচ?",
+    options: ["আয়", "সম্পদ", "দায়", "খরচ"],
+    answer: 3
+  },
+  {
+    question: "উত্তোলনের ওপর সুদ কী ধরনের হিসাব?",
+    options: ["আয়", "ব্যয়", "দায়", "বিনিয়োগ"],
+    answer: 0
+  },
+  {
+    question: "যদি চুক্তিপত্রে উত্তোলনের তারিখ উল্লেখ না থাকে, কত মাসের জন্য সুদ গণনা হয়?",
+    options: ["৬ মাস", "১২ মাস", "৩ মাস", "১ মাস"],
+    answer: 0
+  },
+  {
+    question: "যদি একজন অংশীদার প্রতি মাসের শুরুতে সমপরিমাণ উত্তোলন করে, কত মাসের সুদ গণনা হয়?",
+    options: ["৬ মাস", "৬.৫ মাস", "৫ মাস", "৬.৫ মাস"], // Adjust as needed
+    answer: 1
+  },
+  {
+    question: "যদি একজন অংশীদার প্রতি মাসের শেষে উত্তোলন করে, কত মাসের জন্য সুদ গণনা হয়?",
+    options: ["৫ মাস", "৬ মাস", "৫.৫ মাস", "৬.৫ মাস"],
+    answer: 2
+  },
+  {
+    question: "যদি উত্তোলন মাঝামাঝি সময়ে করা হয়, তবে কত মাসের সুদ ধরা হয়?",
+    options: ["৬ মাস", "৫ মাস", "৩ মাস", "৭ মাস"],
+    answer: 0
+  },
+  {
+   question: "যদি একজন অংশীদার প্রতি মাসের শুরুতে ₹৩০০ করে উত্তোলন করে এবং সুদের হার ৫% হয়, তাহলে মোট বার্ষিক সুদ কত হবে?",
+   options: ["৯৭.৫০ টাকা", "৭৫ টাকা", "১৫০ টাকা", "৬১ টাকা"],
+   answer: 0
+  },
+  {
+    question: "দৈনিক অংশীদার প্রতি মাসের শেষে ₹৫০০ উত্তোলন করলে এবং বার্ষিক সুদের হার ৬% হয়, তাহলে বার্ষিক কত টাকা সুদ ধার্য হবে?",
+    options: [
+      "১৬৫ টাকা (৫০০×১২×৬ /১০০ × ৫১/২ /১২ ) অথবা (৫০০×১২×৬ /১০০ × ১১/২৪)",
+      "১৪৫ টাকা", 
+      "১৭৫ টাকা", 
+      "১৫০ টাকা"
+    ],
+    answer: 0
+  },
+  {
+    question: "অংশীদারী কারবার পরিচালনায় কারা অংশগ্রহণ করে?",
+    options: ["ঘুমন্ত অংশীদার", "সকল অংশীদার", "নাবালক অংশীদার", "বহিরাগত বিনিয়োগকারী"],
+    answer: 1
+  },
+  {
+    question: "অংশীদারদের চলতি তহবিলের হিসাবের প্রকৃতি কেমন হয়?",
+    options: ["শুধু দেনাদার", "শুধু জমাদার", "দেনাদার ও জমাদার উভয়ই", "শুধু অন্তর্বর্তী হিসাব"],
+    answer: 2
+  },
+  {
+    question: "অংশীদারদের মূলধন তহবিলের হিসাব কেমন ধরনের হয়?",
+    options: ["সব সময় জমাদার", "সব সময় দেনাদার", "ঐচ্ছিক", "পর্যবেক্ষণমূলক"],
+    answer: 0
+  },
+  {
+    question: "কখন অংশীদারদের চলতি মূলধনের হিসাব খোলা হয়?",
+    options: ["যখন মূলধনের হিসাব তৈরি হয়", "লাভ গণনার সময়", "পুঁজির ঘাটতি হলে", "বছরের শেষে"],
+    answer: 0
+  },
+  {
+    question: "উত্তোলন তহবিলের হিসাবের প্রকৃতি কেমন হয়?",
+    options: ["সব সময় দেনাদার", "সব সময় জমাদার", "নিরপেক্ষ", "খরচ হিসাব"],
+    answer: 0
+  },
+  {
+    question: "অংশীদারদের চলতি তহবিল কী ধরনের হিসাব?",
+    options: ["সম্পত্তি সম্পক্‌ত হিসাব", "দেনাদার হিসাব", "ব্যয় হিসাব", "আয় হিসাব"],
+    answer: 0
+  },
+  {
+    question: "অংশীদার কর্তৃক দেওয়া ঋণের সুদ কোথায় হিসাব করা হয়?",
+    options: ["মূলধন হিসাবে", "লাভ হিসাবে", "বিনিয়োগ হিসাবে", "সম্পদ হিসাবে"],
+    answer: 1
+  },
+  {
+    question: "যদি অংশীদারী প্রতিষ্ঠানের নিট মুনাফা ₹২১০০০০ হয় এবং অংশীদার ৫% অংশীদারী মুনাফার দাবি রাখে, তাহলে তার হিসাবযোগ্য অংশ কত?",
+    options: [
+      "₹১০,০০০ (২১০০০০×৫/১০৫)",
+      "₹৫০০০", 
+      "₹১২,০০০", 
+      "₹৮,০০০"
+    ],
+    answer: 0
+  },
+  {
+    question: "সবচেয়ে প্রাচীন ব্যবসার ধরন কোনটি?",
+    options: ["অংশীদারী কারবার", "একক মালিকানা কারবার", "সমবায় ব্যবসা", "কার্পোরেট সংস্থা"],
+    answer: 1
+  },
+  {
+    question: "লাভ-ক্ষতির বণ্টন তহবিল কখন তৈরি হয়?",
+    options: ["যখন ব্যবসার আয় ক্ষতির পরিমাণ বেশি হয়", "যখন মূলধনের ঘাটতি হয়", "যখন অর্থপ্রবাহ স্থির হয়", "যখন কর কমানো দরকার হয়"],
+    answer: 0
+  },
+  {
+    question: "ভবিষ্যতের প্রয়োজন ভাবনায় সংরক্ষিত অর্থ কোথায় রেকর্ড করা হয়?",
+    options: ["মূলধন হিসাব", "লাভ-ক্ষতি বণ্টন তহবিলে", "নগদ প্রবাহ বিবরণীতে", "ঋণ হিসাব"],
+    answer: 1
+  },
+  {
+    question: "অংশীদারী কারবারের সব ঋণের জন্য অংশীদাররা কীভাবে দায়বদ্ধ?",
+    options: ["শুধু ব্যক্তিগতভাবে", "শুধু যৌথভাবে", "একক এবং যৌথভাবে", "দেনাদার হিসেবে"],
+    answer: 2
+  },
+  {
+    question: "ভারতের অংশীদারী কারবার কোন আইনের অধীনে পরিচালিত হয়?",
+    options: ["আয়কর আইন", "সমবায় আইন", "ভারতীয় কোম্পানি আইন", "অংশীদারী আইন"],
+    answer: 3
+  },
   ],
-  lesson2: [
-  {
-    question: "Which of the following is a numeric data type in Python?",
-    options: ["str", "bool", "int", "None"],
-    answer: 2
-  },
-  {
-    question: "What is the output of `type(3.14)`?",
-    options: ["class 'int'", "class 'str'", "class 'float'", "class 'bool'"],
-    answer: 2
-  },
-  {
-    question: "Which of these is a sequence data type?",
-    options: ["int", "list", "bool", "float"],
-    answer: 1
-  },
-  {
-    question: "What value does the `bool()` function return for an empty string?",
-    options: ["True", "False", "None", "Error"],
-    answer: 1
-  },
-  {
-    question: "Which of these is a correct boolean literal in Python?",
-    options: ["TRUE", "true", "Yes", "True"],
-    answer: 3
-  },
-  {
-    question: "What is the result of `len('hello')`?",
-    options: ["4", "5", "6", "Error"],
-    answer: 1
-  },
-  {
-    question: "Which function tells you the type of a value?",
-    options: ["typeof()", "gettype()", "typeof", "type()"],
-    answer: 3
-  },
-  {
-    question: "Which of the following is mutable?",
-    options: ["tuple", "int", "str", "list"],
-    answer: 3
-  },
-  {
-    question: "What is the type of `[1, 2, 3]`?",
-    options: ["list", "tuple", "set", "dict"],
+  lesson2: [{
+    question: "সুনাম কী?",
+    options: ["অস্পর্শনীয় স্থায়ী সম্পতি", "অস্থায়ী সম্পতি", "অলীক সম্পতি", "অর্থনৈতিক সম্পতি"],
     answer: 0
   },
   {
-    question: "Which data type can store key-value pairs?",
-    options: ["list", "tuple", "dict", "set"],
-    answer: 2
-  },
-  {
-    question: "What will `type(True)` return?",
-    options: ["class 'str'", "class 'bool'", "class 'int'", "class 'float'"],
+    question: "সুনামের মূল্যায়ন করা হয় কোন তহসাবতনকার মান অনুযায়ী?",
+    options: ["AS-10", "AS-26", "AS-18", "AS-2"],
     answer: 1
   },
   {
-    question: "How do you define a tuple with one element?",
-    options: ["(5)", "[5]", "{5}", "(5,)"],
-    answer: 3
+    question: "অতিমুনাফা বলতে কী বোঝায়?",
+    options: ["গড় মুনাফা ও স্বাভাবিক মুনাফার যোগফল", "গড় মুনাফা ও স্বাভাবিক মুনাফার তফাৎ", "স্বাভাবিক মুনাফা", "গড় মুনাফা"],
+    answer: 1
   },
   {
-    question: "What does `None` represent in Python?",
-    options: ["Zero", "Empty string", "A null value", "False"],
+    question: "সুনামের মূল্যায়নের পদ্ধতি নয় কোনটি?",
+    options: ["গড় মুনাফা পদ্ধতি", "অতিমুনাফা পদ্ধতি", "স্বাভাবিক মুনাফা পদ্ধতি", "বাজার মূল্য পদ্ধতি"],
     answer: 2
   },
   {
-    question: "What is the result of `isinstance(5, int)`?",
-    options: ["True", "False", "Error", "None"],
+    question: "গড় মুনাফা পদ্ধতিতে সুনামের মূল্যায়ন করতে হলে গড় মুনাফার সাথে কোন বিষয় বিবেচনা করা হয়?",
+    options: ["বাজার মূল্য", "তথ্য বিশ্লেষণ", "নির্দিষ্ট বছরের সংখ্যা", "অতিমুনাফা"],
+    answer: 2
+  },
+  {
+    question: "সাধারণ লাভের অতিরিক্ত লাভকে কী বলা হয়?",
+    options: ["অতিমুনাফা", "গড় মুনাফা", "স্বাভাবিক মুনাফা", "বাজার মুনাফা"],
     answer: 0
   },
   {
-    question: "Which function converts a string to an integer?",
-    options: ["str()", "int()", "bool()", "float()"],
+    question: "গড় মুনাফা পদ্ধতিতে সুনামের মূল্যায়নের সূত্রটি কী?",
+    options: ["গড় মুনাফা × বাজার মূল্য", "গড় মুনাফা × নির্দিষ্ট বছরের সংখ্যা", "গড় মুনাফা × অতিমুনাফা", "গড় মুনাফা × স্বাভাবিক মুনাফা"],
     answer: 1
+  },
+  {
+    question: "অতিমুনাফা পদ্ধতিতে সুনামের মূল্যায়নের সূত্রটি কী?",
+    options: ["অতিমুনাফা × নির্দিষ্ট বছরের সংখ্যা", "অতিমুনাফা × বাজার মূল্য", "অতিমুনাফা × স্বাভাবিক মুনাফা", "অতিমুনাফা × গড় মুনাফা"],
+    answer: 0
+  },
+  {
+    question: "তহসাবতনকারীর ক্ষেত্রভাগ অনুযায়ী সুনাম কোন ধরনের তহসাব?",
+    options: ["সম্পতির তহসাব", "দায়বদ্ধতার তহসাব", "আয়ের তহসাব", "ব্যয়ের তহসাব"],
+    answer: 0
+  },
+  {
+    question: "সুনাম সৃষ্টি হয় কী থেকে?",
+    options: ["আস্থা ও বিশ্বাস", "অতিমুনাফা", "বাজার মূল্য", "গড় মুনাফা"],
+    answer: 0
+  },
+  {
+    question: "অংশীদারের চুক্তিপত্র অনুযায়ী কোন ধারায় বিষয়গুলি পালিত হয়?",
+    options: ["১০ নং ধারা", "১৩ নং ধারা", "১৫ নং ধারা", "২০ নং ধারা"],
+    answer: 1
+  },
+  {
+    question: "স্বাভাবিক মুনাফার হার উল্লেখ না থাকলে সাধারণত কত শতাংশ ধরা হয়?",
+    options: ["৫%", "১০%", "১৫%", "২০%"],
+    answer: 1
+  },
+  {
+    question: "স্বাভাবিক মুনাফা নির্ণয়ের সূত্রটি কী?",
+    options: ["বিনিয়োগকৃত মূলধন × স্বাভাবিক মুনাফার হার", "গড় মুনাফা × স্বাভাবিক মুনাফার হার", "অতিমুনাফা × স্বাভাবিক মুনাফার হার", "বাজার মূল্য × স্বাভাবিক মুনাফার হার"],
+    answer: 0
+  },
+  {
+    question: "সুনামের মূল্য বৃদ্ধি হয় কখন?",
+    options: ["যখন লাভ বৃদ্ধি হয়", "যখন ক্ষতি বৃদ্ধি হয়", "যখন বাজার মূল্য বৃদ্ধি হয়", "যখন গড় মুনাফা বৃদ্ধি হয়"],
+    answer: 0
+  },
+  {
+    question: "সুনাম একটি অলীক সম্পত্তি, এটি কীসের উপর নির্ভরশীল?",
+    options: ["আন্তরিক সেবা", "অতিমুনাফা", "বাজার মূল্য", "গড় মুনাফা"],
+    answer: 0
+  },
+  {
+    question: "অতিমুনাফা মূল্‍্যায়ন পদ্ধতিতে সুনামের মূল্য নির্ধারণের সূত্রটি কী?",
+    options: ["(অতিরিক্ত মুনাফা ÷ স্বাভাবিক মুনাফার হার) × ১০০", "গড় মুনাফা × স্বাভাবিক মুনাফার হার", "অতিমুনাফা × অতিবছরের সংখ্যা", "গড় মুনাফা + অতিমুনাফা"],
+    answer: 0
+  },
+  {
+    question: "“কল্যে তুই এ বই পড়া” — এটি কোন ধরনের সুনাম?",
+    options: ["ক্রয়যোগ্য সুনাম", "বাজারভিত্তিক সুনাম", "স্থানীয় সুনাম", "সয়ংভূ সুনাম"],
+    answer: 2
+  },
+  {
+    question: "মূল্যায়ন পদ্ধতিতে সুনামের কতটি পদ্ধতি আছে?",
+    options: ["একটি", "দুটি", "তিনটি", "চারটি"],
+    answer: 1
+  },
+  {
+    question: "তহসাবতনিয়মান ২৬ অনুযায়ী কোন সুনামকে তহসাবের অন্তর্ভুক্ত করা হয়?",
+    options: ["ক্রয়যোগ্য সুনাম", "সয়ংভূ সুনাম", "স্থায়ী সুনাম", "বাজার সুনাম"],
+    answer: 0
+  },
+  {
+    question: "কোন সুনামকে তহসাবতনিকভাবে স্বীকৃতি দেওয়া হয় না?",
+    options: ["ক্রয়যোগ্য সুনাম", "সয়ংভূ সুনাম", "স্থানীয় সুনাম", "অলীক সুনাম"],
+    answer: 1
+  },
+  {
+    question: "তিন বছরের ক্রয়ের ভিত্তিতে চার বছরের গড় মুনাফায় সুনামের পরিমাণ কত হবে, যদি চার বছরের মুনাফা ₹১২০০০, ₹১৮০০০, ₹১৬০০০ ও ₹১৪০০০ হয়?",
+    options: ["₹৪৫০০০", "₹৫২০০০", "₹৪৮০০০", "₹৪০০০০"],
+    answer: 0
+  },
+  {
+    question: "গড় মুনাফা ₹৩,০০,০০০ হলে এবং স্বাভাবিক মুনাফার হার ১২% হলে, বিনিয়োগকৃত মূলধন ₹২২,০০,০০০ হলে সুনামের মূল্য কত?",
+    options: ["₹৩,০০,০০০", "₹২,৮০,০০০", "₹৩,২০,০০০", "₹২,৪০,০০০"],
+    answer: 0
+  },
+  {
+    question: "গড় মুনাফা ₹১৫০০০ হলে এবং অতিমুনাফাভিত্তিক দুই বছরের ক্রয়ে সুনামের মূল্য যদি ₹১৮০০০ হয়, স্বাভাবিক মুনাফা কত?",
+    options: ["₹৬০০০", "₹৯০০০", "₹৪০০০", "₹৭৫০০"],
+    answer: 0
+  },
+  {
+    question: "দুই বছরের ক্রয়ের ভিত্তিতে তিন বছরের গড় মুনাফায় সুনামের মূল্য কত হবে, যদি তিন বছরের মুনাফা ₹২০০০০, (₹৫০০০), এবং ₹১৫০০০ হয়?",
+    options: ["₹২০০০০", "₹১৫০০০", "₹২৫০০০", "₹১৮০০০"],
+    answer: 0
+  },
+  {
+    question: "গড় মুনাফা নির্ধারণে অস্বাভাবিক লাভ ও ক্ষতিকে কিভাবে বিবেচনা করা হয়?",
+    options: ["লাভ থেকে বিয়োগ ও ক্ষতির সাথে যোগ", "উল্টোভাবে যোগ-বিয়োগ", "তালিকাভুক্ত করা হয় না", "সব লাভ-ক্ষতিকে বাদ দেওয়া হয়"],
+    answer: 0
+  },
+  {
+    question: "যদি বিনিয়োগকৃত মূলধন ₹৩,০০,০০০ এবং প্রকৃত অর্জিত মুনাফা ₹২০০০০ হয়, এবং স্বাভাবিক মুনাফার হার ১০% হয়, তাহলে অতিমুনাফার পরিমাণ কত?",
+    options: ["₹১০০০০", "₹২০০০০", "₹৩০০০০", "₹৫০০০"],
+    answer: 0
   }
 ],
   lesson3: [{
-    question: "Which function is used to take input from the user in Python?",
-    options: ["input()", "get()", "read()", "ask()"],
-    answer: 0
-  },
-  {
-    question: "What data type does `input()` return?",
-    options: ["int", "float", "str", "bool"],
+    question: "কোম্পানির শেয়ারহোল্ডাররা কিসের জন্য দায়ী গণ্য হন?",
+    options: ["পরিচালকের ভুলের জন্য", "নির্বাচিত কর্মচারীদের জন্য", "কোম্পানির ঋণের জন্য সীমিতভাবে", "সম্পূর্ণ ব্যক্তিগত দায়ের জন্য"],
     answer: 2
   },
   {
-    question: "What is the output of `input('Name: ')` if the user types Amy?",
-    options: ["Amy", "'Amy'", "\"Amy\"", "All of the above"],
+    question: "কোন সালে কোম্পানি আইনে সংশোধন আনা হয়?",
+    options: ["২০১৩", "২০০১", "১৯৯৫", "১৯৫৬"],
     answer: 0
   },
   {
-    question: "To convert a user input into an integer, which function should be used?",
-    options: ["str()", "int()", "float()", "bool()"],
+    question: "ভারতে প্রথম কোম্পানি আইন চালু হয় কোন সালে?",
+    options: ["১৯৩২", "১৯৫৬", "১৯৬৫", "২০০১"],
     answer: 1
   },
   {
-    question: "What happens if you try to convert 'hello' with `int('hello')`?",
-    options: ["0", "Error", "None", "hello"],
+    question: "কতটি প্রধান শ্রেণিতে কোম্পানিকে ভাগ করা হয়?",
+    options: ["১টি", "২টি", "৩টি", "৪টি"],
     answer: 1
   },
   {
-    question: "What does `float('3.14')` return?",
-    options: ["3", "3.0", "3.14", "'3.14'"],
-    answer: 2
-  },
-  {
-    question: "Which function converts a string `'True'` into a boolean?",
-    options: ["int()", "str()", "bool()", "float()"],
-    answer: 2
-  },
-  {
-    question: "What will `input() + input()` return if user enters 3 and 4?",
-    options: ["7", "34", "12", "Error"],
+    question: "একটি কোম্পানির শেয়ার হোল্ডারের দায় কীরূপ?",
+    options: ["সীমাহীন", "সীমাবদ্ধ", "আংশিক", "সরকার নির্ধারিত"],
     answer: 1
   },
   {
-    question: "How do you take input and convert it to an integer correctly?",
-    options: ["int = input()", "int(input())", "input(int())", "int(input)"],
+    question: "শেয়ার মূল্যের ভিত্তিতে কোম্পানির কতটি শ্রেণি রয়েছে?",
+    options: ["১টি", "২টি", "৩টি", "৪টি"],
     answer: 1
   },
   {
-    question: "If user enters '45.6', how can you convert it to a float?",
-    options: ["float('45.6')", "int('45.6')", "bool('45.6')", "str(45.6)"],
-    answer: 0
-  },
-  {
-    question: "Which of the following is NOT a valid type conversion function?",
-    options: ["int()", "bool()", "float()", "convert()"],
+    question: "একটি পাবলিক কোম্পানির সর্বনিম্ন সদস্য সংখ্যা কত?",
+    options: ["২ জন", "৩ জন", "৫ জন", "৭ জন"],
     answer: 3
   },
   {
-    question: "How can you safely combine an integer and a string in print?",
-    options: ["print('Score: ' + 90)", "print('Score: ' + str(90))", "print(90 + 'Score: ')", "print(str + 90)"],
+    question: "একটি প্রাইভেট কোম্পানির সর্বনিম্ন সদস্য সংখ্যা কত?",
+    options: ["১ জন", "২ জন", "৩ জন", "৭ জন"],
     answer: 1
   },
   {
-    question: "What does `bool('False')` return?",
-    options: ["False", "True", "Error", "None"],
-    answer: 1
-  },
-  {
-    question: "How do you store a user's name in a variable?",
-    options: ["name = input()", "input = name()", "print(name) = input()", "name = str(input"],
-    answer: 0
-  },
-  {
-    question: "Which line correctly takes two numbers from the user and adds them?",
-    options: ["a + b = input()", "int(input()) + int(input())", "input() + input()", "float + float"],
-    answer: 1
-  }],
-  lesson4: [{
-    question: "Which keyword is used for a conditional statement in Python?",
-    options: ["if", "for", "define", "when"],
-    answer: 0
-  },
-  {
-    question: "What is the output of `if 5 > 3: print('Yes')`?",
-    options: ["Error", "Yes", "False", "None"],
-    answer: 1
-  },
-  {
-    question: "What is the correct syntax for an else block?",
-    options: ["else then:", "else:", "otherwise:", "end:"],
-    answer: 1
-  },
-  {
-    question: "Which keyword is used to test multiple conditions after an if statement?",
-    options: ["elseif", "elif", "else if", "elif()"],
-    answer: 1
-  },
-  {
-    question: "What will `if False:` do?",
-    options: ["Execute code inside block", "Skip the block", "Raise Error", "Return True"],
-    answer: 1
-  },
-  {
-    question: "What type of loop is used to repeat a block a specific number of times?",
-    options: ["while", "if", "for", "do"],
+    question: "সাধারণ শেয়ারের লভ্যাংশ নির্ভর করে কোন বিষয়ের ওপর?",
+    options: ["প্রতিষ্ঠানিক অনুমোদন", "বাজার দরের ওপর", "লভ্যাংশের উপর", "ব্যালান্স শিটের উপর"],
     answer: 2
   },
   {
-    question: "What is the output of `for i in range(3): print(i)`?",
-    options: ["0 1 2", "1 2 3", "0 1 2 3", "3 2 1"],
-    answer: 0
-  },
-  {
-    question: "What does the `break` statement do?",
-    options: ["Skips next iteration", "Exits loop entirely", "Restarts loop", "Pauses loop"],
+    question: "মূলধনের ভিত্তিতে কোম্পানি কটি শ্রেণিতে বিভক্ত হয়?",
+    options: ["১টি", "২টি", "৩টি", "৪টি"],
     answer: 1
   },
   {
-    question: "Which statement skips to the next loop iteration?",
-    options: ["next", "pass", "skip", "continue"],
+    question: "পাবলিক কোম্পানির সদস্য সংখ্যা সর্বোচ্চ কতজন হতে পারে?",
+    options: ["২০০ জন", "৫০০ জন", "নির্দিষ্ট নয় (কোম্পানির দ্বারা নির্ধারিত)", "৭ জন"],
+    answer: 2
+  },
+  {
+    question: "প্রাইভেট কোম্পানির সদস্য সংখ্যা সর্বোচ্চ কতজন হতে পারে?",
+    options: ["৫০ জন", "১০০ জন", "২০০ জন", "৫০০ জন"],
+    answer: 2
+  },
+  {
+    question: "যে শেয়ারের লভ্যাংশের হার নির্দিষ্ট, তাকে কী বলা হয়?",
+    options: ["অগ্রাধিকার শেয়ার", "সাধারণ শেয়ার", "বৈদেশিক শেয়ার", "বোনাস শেয়ার"],
+    answer: 0
+  },
+  {
+    question: "কোন ধরনের শেয়ারের ক্ষেত্রে কোম্পানি লিকুইডেশনের সময় আগে অর্থ ফেরত দেওয়া হয়?",
+    options: ["সাধারণ শেয়ার", "অগ্রাধিকার শেয়ার", "বোনাস শেয়ার", "কর্মচারী শেয়ার"],
+    answer: 1
+  },
+  {
+    question: "যদি কোনো কোম্পানি নির্দিষ্ট মূলধন নির্ধারণ করে, সেটি কী নামে পরিচিত?",
+    options: ["অনুমোদিত মূলধন", "মেমোরেন্ডাম মূলধন", "জমাকৃত মূলধন", "লভ্যাংশ মূলধন"],
+    answer: 0
+  },
+  {
+    question: "অনুমোদিত মূলধন কোম্পানির কোথায় উল্লেখ থাকে?",
+    options: ["সমঝোতা পত্রে", "স্মারকলিপিতে", "চুক্তিপত্রে", "নির্বাচনী নথিতে"],
+    answer: 1
+  },
+  {
+    question: "অনুমোদিত মূলধনের যে অংশ জনসাধারণের কাছে বিক্রির জন্য প্রস্তাব করা হয়, সেটিকে কী বলা হয়?",
+    options: ["অনুমোদিত মূলধন", "বিক্রয়যোগ্য মূলধন", "প্রচারমূলধন", "সংরক্ষিত মূলধন"],
+    answer: 1
+  },
+  {
+    question: "যে শেয়ার জনসাধারণের কাছে বিক্রি হয়, সেটিকে কী বলা হয়?",
+    options: ["বিক্রিত মূলধন", "ইস্যু করা মূলধন", "বিক্রয়যোগ্য মূলধন", "নির্ধারিত মূলধন"],
+    answer: 0
+  },
+  {
+    question: "যে মূলধন বিনিয়োগকারীদের কাছ থেকে আদায় করা হয়েছে, সেটি কী?",
+    options: ["নামমাত্র মূলধন", "অধিকৃত মূলধন", "জমাকৃত মূলধন", "প্রচারমূলধন"],
+    answer: 2
+  },
+  {
+    question: "শেয়ার বিক্রয় থেকে অর্জিত অতিরিক্ত অর্থকে কী বলা হয়?",
+    options: ["মুনাফা", "মূলধনী লাভ", "সঞ্চিতি", "পুঁজিগত উপার্জন"],
+    answer: 1
+  },
+  {
+    question: "শেয়ার প্রিমিয়াম কোথায় হস্তান্তরিত হয়?",
+    options: ["ব্যয় হিসাবে", "সঞ্চিতি ও পুঁজি তহবিলে", "লাভ-ক্ষতি হিসাব", "লভ্যাংশ হিসাবে"],
+    answer: 1
+  },
+  {
+    question: "অনুমোদিত মূলধনের অপর নাম কী?",
+    options: ["নির্ধারিত মূলধন", "জমাকৃত মূলধন", "প্রচলিত মূলধন", "প্রস্তাবিত মূলধন"],
+    answer: 0
+  },
+  {
+    question: "অনুমোদিত মূলধন দ্বারা কী বোঝানো হয়?",
+    options: ["সর্বনিম্ন মূলধন", "শেয়ার মূলধনের সর্বোচ্চ সীমা", "নামমাত্র মূল্য", "বাজার মূল্য"],
+    answer: 1
+  },
+  {
+    question: "মূলধন সঞ্চিতির কাজে কাকে দায়িত্ব দেওয়া হয়?",
+    options: ["অডিটর", "পরিচালক", "কোম্পানি সচিব", "কর্তৃত্বপ্রাপ্ত ব্যাক্তি"],
+    answer: 1
+  },
+  {
+    question: "কোম্পানির সংশোধনীর ফলে শেয়ার প্রিমিয়ামের নাম কী হয়?",
+    options: ["মূলধনী লাভ", "পুঁজিগত উপার্জন", "বিশেষ প্রিমিয়াম", "সঞ্চিতি"],
+    answer: 1
+  },
+  {
+    question: "নিম্নলিখিত কোনটি কোর্ট মঞ্জুরীকৃত মূলধনী কোম্পানির বৈশিষ্ট্য নয়?",
+    options: ["সীমিত দায়", "লভ্যাংশপ্রাপ্তি", "নিয়ন্ত্রিত মূলধন", "অসীম দায়"],
     answer: 3
   },
   {
-    question: "What is the result of `while False:`?",
-    options: ["Runs once", "Runs forever", "Never runs", "Raises error"],
-    answer: 2
-  },
-  {
-    question: "How many times will `for i in range(0, 5, 2)` loop?",
-    options: ["5", "3", "2", "4"],
-    answer: 1
-  },
-  {
-    question: "What is the correct way to write a while loop?",
-    options: ["while x < 5", "while(x<5):", "while x < 5:", "loop while x < 5:"],
-    answer: 2
-  },
-  {
-    question: "What will `pass` do in a loop?",
-    options: ["Exit loop", "Do nothing", "Skip next step", "Raise error"],
-    answer: 1
-  },
-  {
-    question: "What does `range(1, 6)` produce?",
-    options: ["1 to 6", "0 to 5", "1 to 5", "1 to 7"],
-    answer: 2
-  },
-  {
-    question: "Which block is always executed after a loop completes?",
-    options: ["else", "finally", "done", "end"],
-    answer: 0
-  }],
-  lesson5:[
-  {
-    question: "Which operator is used to concatenate strings in Python?",
-    options: ["&", "+", "*", "%"],
-    answer: 1
-  },
-  {
-    question: "What is the output of `'Hello' + 'World'`?",
-    options: ["Hello World", "Hello+World", "HelloWorld", "Error"],
-    answer: 2
-  },
-  {
-    question: "What is the result of `'Python'[0]`?",
-    options: ["P", "y", "n", "0"],
+    question: "কোন অসুবিধার জন্য কোম্পানি প্রতিষ্ঠিত হয়?",
+    options: ["মূলধন সংগ্রহ সীমাবদ্ধতা", "শেয়ারহোল্ডারের অসীম দায়", "প্রযুক্তিগত সীমাবদ্ধতা", "জবাবদিহির ঘাটতি"],
     answer: 0
   },
   {
-    question: "Which method returns the number of characters in a string?",
-    options: ["count()", "length()", "len()", "size()"],
-    answer: 2
-  },
-  {
-    question: "What does `'hi'.upper()` return?",
-    options: ["hi", "HI", "Hi", "Error"],
+    question: "শেয়ার প্রিমিয়াম কোথায় স্থানান্তরিত করা হয়?",
+    options: ["আয় তহবিলে", "শেয়ার তহবিলে", "রিজার্ভ ফান্ডে", "ব্যালেন্স শিটে"],
     answer: 1
   },
   {
-    question: "Which method makes the first letter uppercase?",
-    options: ["title()", "capitalize()", "upper()", "lower()"],
+    question: "কোর্ট অনুমোদিত মূলধনী কোম্পানি কোন আইনের অধীনে পরিচালিত হয়?",
+    options: ["আয়কর আইন", "ভারতীয় কোম্পানি আইন", "সঞ্চয় আইন", "শেয়ার হস্তান্তর আইন"],
     answer: 1
   },
   {
-    question: "What is the result of `'  Amy  '.strip()`?",
-    options: ["'Amy'", "'  Amy  '", "'Amy  '", "'  Amy'"],
+    question: "শেয়ারহোল্ডাররা কোম্পানির কী লাভ করে থাকেন?",
+    options: ["বোনাস", "লভ্যাংশ", "অ্যাডভান্স", "মূলধন ফেরত"],
+    answer: 1
+  },
+  {
+    question: "পাবলিক সেক্টর কোম্পানির ক্ষেত্রে সরকারের সর্বনিম্ন শেয়ার কত শতাংশ হওয়া উচিত?",
+    options: ["৪০%", "৫১%", "৬০%", "৭৫%"],
+    answer: 1
+  },
+  {
+    question: "প্রাইভেট সেক্টর কোম্পানির ক্ষেত্রে সরকারের অংশীদারিত্ব কত শতাংশের কম হয়?",
+    options: ["৫১%", "৫০%", "৪৯%", "৪৫%"],
     answer: 0
   },
   {
-    question: "Which method checks if a string is all digits?",
-    options: ["isnumeric()", "isdigit()", "isnumber()", "isdigits()"],
-    answer: 1
-  },
-  {
-    question: "What does `'Python'.lower()` return?",
-    options: ["PYTHON", "Python", "python", "pYTHON"],
+    question: "শেয়ার ইস্যুর মাধ্যমে কোম্পানি যে মূলধন সংগ্রহ করে, তাকে কী বলে?",
+    options: ["ধার মূলধন", "তহবিল মূলধন", "নিজস্ব মূলধন", "পরিশোধিত মূলধন"],
     answer: 2
   },
   {
-    question: "How do you get the last character of a string `s`?",
-    options: ["s[0]", "s[-1]", "s[1]", "s[len]"],
-    answer: 1
-  },
-  {
-    question: "Which method splits a string into a list?",
-    options: ["slice()", "divide()", "split()", "chop()"],
+    question: "লোকসভা ও রাজ্যসভার আইন দ্বারা গঠিত কোম্পানি কী নামে পরিচিত?",
+    options: ["সরকারি কোম্পানি", "সরাসরি নিয়ন্ত্রিত কোম্পানি", "আইনসিদ্ধ কোম্পানি", "সংবিধানিক প্রতিষ্ঠান"],
     answer: 2
   },
   {
-    question: "What is the result of `'Amy'.replace('A', 'E')`?",
-    options: ["Emy", "Amy", "EMY", "Eay"],
+    question: "মূলধনের ভিত্তিতে অগ্রাধিকার শেয়ারের কত শ্রেণি রয়েছে?",
+    options: ["১টি", "২টি", "৩টি", "৪টি"],
+    answer: 1
+  },
+  {
+    question: "প্রাইভেট কোম্পানির নামের শেষে কী লেখা থাকে?",
+    options: ["Ltd.", "Private Limited", "Pvt. Ltd.", "Inc."],
+    answer: 2
+  },
+  {
+    question: "পাবলিক কোম্পানির নামের শেষে কী লেখা থাকে?",
+    options: ["Inc.", "Private", "Ltd.", "Pvt. Ltd."],
+    answer: 2
+  },
+  {
+    question: "কোন কোম্পানি জনসাধারণের কাছে অবাধে শেয়ার বিক্রি করতে পারে?",
+    options: ["প্রাইভেট কোম্পানি", "পার্টনারশিপ কোম্পানি", "পাবলিক কোম্পানি", "সকল কোম্পানি"],
+    answer: 2
+  },
+  {
+    question: "কোম্পানির যৌথ মালিকানার ক্ষেত্রে শেয়ারের কত শতাংশ থাকা প্রয়োজন?",
+    options: ["৫%", "১১%", "২৫%", "৫০%"],
+    answer: 1
+  },
+  {
+    question: "তালিকাভুক্ত কোম্পানির ক্ষেত্রে কোন দর্শনের অগ্রাধিকার রয়েছে?",
+    options: ["লাভ সর্বোচ্চীকরণ", "অভ্যন্তরীণ নীতি", "সামাজিক দায়িত্ব", "নিয়মনীতি পরিপালন"],
     answer: 0
   },
   {
-    question: "What is the output of `'Amy' * 3`?",
-    options: ["AmyAmyAmy", "Amy*3", "Amy 3 times", "Error"],
+    question: "যদি কৃত্রিম মূলধনের কার্য অঙ্গ রয়েছে, তাকে কী বলে?",
+    options: ["প্রাকৃতিক মূলধন", "অনাকৃষ্ট কৃত্রিম মূলধন", "সঞ্চিত মূলধন", "অথর্ব মূলধন"],
     answer: 0
   },
   {
-    question: "Which of these checks if a string starts with 'Py'?",
-    options: ["startswith('Py')", "start('Py')", "begins('Py')", "has('Py')"],
+    question: "যদি কৃত্রিম মূলধনের কার্য অঙ্গ নেই, তাকে কী বলে?",
+    options: ["সঞ্চিত মূলধন", "অনাকৃষ্ট কৃত্রিম মূলধন", "অথর্ব মূলধন", "প্রাকৃতিক মূলধন"],
+    answer: 1
+  },
+  {
+    question: "বিনিয়োগের ঝুঁকি বিশ্লেষণে কোন দর্শনের প্রাধান্য রয়েছে?",
+    options: ["তথ্যনির্ভর দর্শন", "নৈতিক দর্শন", "লাভ দর্শন", "পরিবেশগত দর্শন"],
     answer: 0
   },
   {
-    question: "How do you count the number of times 'a' appears in a string?",
-    options: ["count('a')", "str.count('a')", "s.count('a')", "string.count()"],
-    answer: 2
-  }],
-  lesson6: [{
-    question: "Which of the following defines a list in Python?",
-    options: ["(1, 2, 3)", "{1, 2, 3}", "[1, 2, 3]", "<1, 2, 3>"],
-    answer: 2
-  },
-  {
-    question: "What is the index of the first element in a Python list?",
-    options: ["1", "0", "-1", "Depends on list type"],
-    answer: 1
-  },
-  {
-    question: "What is the output of `len([10, 20, 30])`?",
-    options: ["2", "3", "10", "Error"],
-    answer: 1
-  },
-  {
-    question: "What does `my_list.append(4)` do?",
-    options: ["Replaces 4th item", "Adds 4 at beginning", "Adds 4 at end", "Deletes 4"],
-    answer: 2
-  },
-  {
-    question: "How do you access the last item of `nums = [1, 2, 3]`?",
-    options: ["nums[3]", "nums[-1]", "nums[0]", "nums[last]"],
-    answer: 1
-  },
-  {
-    question: "What happens if you access an index that doesn’t exist?",
-    options: ["0 is returned", "None is returned", "Error", "It creates a new item"],
-    answer: 2
-  },
-  {
-    question: "What does `list1 + list2` do?",
-    options: ["Adds values", "Compares lists", "Concatenates lists", "Deletes duplicates"],
-    answer: 2
-  },
-  {
-    question: "Which method removes the first matching value from a list?",
-    options: ["remove()", "pop()", "delete()", "clear()"],
+    question: "জীবনবীমা সংস্থায় কোন দর্শনের প্রাধান্য রয়েছে?",
+    options: ["নৈতিক দর্শন", "তথ্যনির্ভর দর্শন", "লাভ দর্শন", "আন্তর্জাতিক দর্শন"],
     answer: 0
   },
   {
-    question: "Which method removes an item at a specific index?",
-    options: ["remove(index)", "pop(index)", "delete(index)", "popvalue(index)"],
-    answer: 1
-  },
-  {
-    question: "What does `my_list[1:3]` return?",
-    options: ["Element 1 and 3", "Elements from index 1 to 2", "Error", "Index 3 only"],
-    answer: 1
-  },
-  {
-    question: "What does `list.reverse()` do?",
-    options: ["Returns reversed list", "Sorts list", "Changes list in place", "Deletes list"],
-    answer: 2
-  },
-  {
-    question: "What is the result of `[1, 2] * 2`?",
-    options: ["[2, 4]", "[1, 2, 1, 2]", "Error", "[1, 1, 2, 2]"],
-    answer: 1
-  },
-  {
-    question: "Which function sorts a list permanently?",
-    options: ["sort()", "sorted()", "order()", "arrange()"],
-    answer: 0
-  },
-  {
-    question: "Which function returns a new sorted list without changing the original?",
-    options: ["sort()", "sorted()", "reverse()", "reorder()"],
-    answer: 1
-  },
-  {
-    question: "What does `my_list.clear()` do?",
-    options: ["Deletes first item", "Removes all items", "Resets to None", "Sorts the list"],
-    answer: 1
-  }],
-  lesson7: [
-  {
-    question: "Which keyword is used to import a module in Python?",
-    options: ["require", "include", "import", "load"],
-    answer: 2
-  },
-  {
-    question: "What does `math.sqrt(16)` return?",
-    options: ["8", "4.0", "4", "16"],
-    answer: 1
-  },
-  {
-    question: "Which module provides functions to work with random values?",
-    options: ["random", "math", "sys", "os"],
-    answer: 0
-  },
-  {
-    question: "How do you import only the `pi` constant from the `math` module?",
-    options: ["import math.pi", "import pi", "from math import pi", "math = pi"],
-    answer: 2
-  },
-  {
-    question: "Which function tells you the length of an object?",
-    options: ["count()", "size()", "length()", "len()"],
+    question: "যেখানে কার্যরত মূল্যধনের অঙ্গ অনুপস্থিত, তাকে কী বলে?",
+    options: ["অ-কৃত্রিম মূলধন", "কৃত্রিম মূলধন", "সঞ্চিত মূলধন", "অনুৎপাদনশীল মূলধন"],
     answer: 3
   },
   {
-    question: "What does `dir()` do?",
-    options: ["Deletes a directory", "Lists valid attributes of an object", "Imports modules", "Creates folders"],
-    answer: 1
-  },
-  {
-    question: "Which module gives access to system-specific functions?",
-    options: ["os", "sys", "platform", "time"],
-    answer: 1
-  },
-  {
-    question: "What will `round(3.67)` return?",
-    options: ["3.6", "3", "4", "Error"],
+    question: "যখন অ-কৃত্রিম মূলধনের সংস্থান ছাড়া কার্য অঙ্গ থাকে না, তখন তাকে কী বলে?",
+    options: ["সঞ্চিত মূলধন", "অনাকৃষ্ট মূলধন", "সংরক্ষিত মূলধন", "অথর্ব মূলধন"],
     answer: 2
   },
   {
-    question: "What is the output of `abs(-5)`?",
-    options: ["5", "-5", "0", "Error"],
+    question: "কোন মূলধন উত্সেচ্ছয়ে ক্রিয়াশীল নয়?",
+    options: ["কৃত্রিম মূলধন", "সংরক্ষিত মূলধন", "অথর্ব মূলধন", "প্রাকৃতিক মূলধন"],
+    answer: 1
+  },
+  {
+    question: "কোন অগ্রাধিকার শেয়ারধারী কোম্পানির মুনাফা বণ্টনে অগ্রাধিকার পায়?",
+    options: ["সাধারণ অগ্রাধিকার শেয়ার", "সিয়ী অগ্রাধিকার শেয়ার", "বিকল্প অগ্রাধিকার শেয়ার", "মূল্যবান অগ্রাধিকার শেয়ার"],
+    answer: 1
+  },
+  {
+    question: "কোন অগ্রাধিকার শেয়ারধারী মুনাফা বণ্টনে অগ্রাধিকার পায় না?",
+    options: ["সিয়ী অগ্রাধিকার শেয়ার", "পরিবর্তনযোগ্য অগ্রাধিকার শেয়ার", "অ-সিয়ী অগ্রাধিকার শেয়ার", "অপরিবর্তনীয় অগ্রাধিকার শেয়ার"],
+    answer: 2
+  },
+  {
+    question: "কোন কোম্পানির ন্যূনতম প্রাথমিক কৃত্রিম মূলধনের প্রয়োজন হয় না?",
+    options: ["বেসরকারি কোম্পানি", "সরকারি কোম্পানি", "সাধারণ কোম্পানি", "শেয়ারবাজারভিত্তিক কোম্পানি"],
+    answer: 3
+  }
+],
+  lesson4 : [{
+    question: "ঋণপত্র যতদিন কোম্পানি থেকে মূলধন সংগ্রহ করে, তাকে কী বলা হয়?",
+    options: ["ঋণপত্র", "ঋণমূলধন", "পাওনাদারের পুঁজি", "সাধারণ মুনাফা"],
+    answer: 1
+  },
+  {
+    question: "ঋণপত্র গ্রহণকারীদের কী বলা হয়?",
+    options: ["অংশীদার", "ঋণগ্রহীতা", "ঋণদাতা", "ঋণপত্র হোল্ডার"],
+    answer: 3
+  },
+  {
+    question: "ঋণগ্রহীতা ঋণের পরিবর্তে কী প্রদান করে?",
+    options: ["লাভ", "সুদ", "বোনাস", "লভ্যাংশ"],
+    answer: 1
+  },
+  {
+    question: "ঋণপত্রের ওপর প্রদত্ত সুদকে কী ধরনের হিসাব ধরা হয়?",
+    options: ["মুনাফার কর হিসাব", "বিনিয়োগ লাভ", "খরচ", "তহবিল হিসাব"],
+    answer: 2
+  },
+  {
+    question: "ঋণমূলধনের প্রকাশভঙ্গি কত প্রকার?",
+    options: ["১ প্রকার", "২ প্রকার", "৩ প্রকার", "৪ প্রকার"],
+    answer: 2
+  },
+  {
+    question: "যে ঋণপত্রে ধারদাতার নাম ও ঠিকানা থাকে, তাকে কী বলা হয়?",
+    options: ["নামহীন ঋণপত্র", "দলিলবদ্ধ ঋণপত্র", "নামযুক্ত ঋণপত্র", "নির্দিষ্ট ঋণপত্র"],
+    answer: 2
+  },
+  {
+    question: "কোন ধরনের ঋণপত্র আমদের ক্ষেত্রে অনুমোদনযোগ্য নয়?",
+    options: ["পরিশোধযোগ্য ঋণপত্র", "অপরিশোধযোগ্য ঋণপত্র", "নিয়মিত ঋণপত্র", "ঋণপ্রমাণপত্র"],
+    answer: 1
+  },
+  {
+    question: "ঋণপত্র কোন মূলধনের অন্তর্ভুক্ত?",
+    options: ["ঋণমূলধন", "সঞ্চিত মূলধন", "চলতি মূলধন", "প্রাকৃতিক মূলধন"],
     answer: 0
   },
   {
-    question: "Which function returns the largest number in a list?",
-    options: ["min()", "max()", "top()", "sort()"],
+    question: "যে ঋণপত্রে সুদের হার উল্লিখিত থাকে, তাকে কী বলা হয়?",
+    options: ["নিয়মিত ঋণপত্র", "কুপন হারের ঋণপত্র", "ফিক্সড বন্ড", "সুদবিহীন ঋণপত্র"],
     answer: 1
   },
   {
-    question: "Which built-in function converts a string to an integer?",
-    options: ["str()", "int()", "float()", "bool()"],
+    question: "যে ঋণপত্রে সুদের হার উল্লেখ নেই বা হার শুন্য, তাকে কী বলা হয়?",
+    options: ["শূন্য কুপন হারের ঋণপত্র", "অস্থায়ী ঋণপত্র", "স্বেচ্ছাকৃত ঋণ", "অপ্রকাশিত ঋণপত্র"],
+    answer: 0
+  },
+  {
+    question: "কোন ধরনের ঋণমূলধন অত্যন্ত স্বল্পমেয়াদে সাময়িক চাহিদা পূরণে ব্যবহৃত হয়?",
+    options: ["জমাতীত ঋণ", "আর্থিক ঋণ", "কার্যকর ঋণ", "চলতি ঋণ"],
+    answer: 0
+  },
+  {
+    question: "যে ঋণপত্রকে অংশে রূপান্তর করা যায়, তাকে কী বলা হয়?",
+    options: ["রূপান্তরযোগ্য ঋণপত্র", "অংশগ্রহণযোগ্য ঋণপত্র", "বিকল্প ঋণপত্র", "স্বেচ্ছায় রূপান্তরযোগ্য ঋণ"],
+    answer: 0
+  },
+  {
+    question: "যে ঋণপত্রকে অংশে রূপান্তর করা যায় না, তাকে কী বলা হয়?",
+    options: ["রূপান্তরযোগ্য ঋণপত্র", "নির্দিষ্ট ঋণপত্র", "অরূপান্তরযোগ্য ঋণপত্র", "ব্যবসায়িক ঋণ"],
+    answer: 2
+  },
+  {
+    question: "ঋণপত্র ইস্যুর ক্ষতিপূরণ কবে প্রদর্শিত হয়?",
+    options: ["ইস্যুর সময়", "বন্ধের সময়", "লভ্যাংশ ঘোষণার সময়", "সমাপ্তি পর্বে"],
+    answer: 0
+  },
+  {
+    question: "কে ঋণপত্র অন্য ঋণপত্রের ক্ষেত্রে অগ্রপেক্ষে পরিশোধ করা হয়, তাকে কী বলা হয়?",
+    options: ["মাতৃ ঋণপত্র", "বিশেষ ঋণপত্র", "প্রেম ঋণপত্র", "অগ্রাধিকার ঋণপত্র"],
+    answer: 2
+  },
+  {
+    question: "অধিহারে ডিবেঞ্চার ইস্যু করা কোম্পানির কী তহবিল গণ্য হয়?",
+    options: ["মুনাফা তহবিল", "মূর্ধনজাতীয় প্রাথমিক তহবিল", "সঞ্চয় তহবিল", "সাধারণ তহবিল"],
     answer: 1
   },
   {
-    question: "What does `type([])` return?",
-    options: ["list", "class 'list'", "[]", "object"],
+    question: "কোম্পানির অবসায়নের সময় ঋণপত্রের ওপর প্রাধান্য কখন পাওয়া যায়?",
+    options: ["পরিশোধকৃত মূলধনের পর", "ইকুইটি শেয়ার মূলধনের আগে", "লভ্যাংশের পর", "বাজারদরের ভিত্তিতে"],
     answer: 1
   },
   {
-    question: "Which built-in module helps you work with dates and times?",
-    options: ["time", "calendar", "datetime", "date"],
+    question: "কোন ধরণের মূলধনের ক্ষেত্রে বারংবার মূলধন তোলা যায়?",
+    options: ["পরিশোধিত মূলধন", "ঋণ মূলধন", "ইস্যু মূলধন", "সঞ্চিত মূলধন"],
+    answer: 1
+  },
+  {
+    question: "আইনের দৃষ্টিতে ঋণপত্র হল কোন ধরণের সম্পদ?",
+    options: ["অস্থাবর সম্পদ", "গ্রহণযোগ্য ও স্বীকৃত দলিল", "সাধারণ প্রতিশ্রুতি", "আয় নির্ভর দলিল"],
+    answer: 1
+  },
+  {
+    question: "ডিবেঞ্চারের ওপর ডিফল্ট কখন ধরে নেওয়া হয়?",
+    options: ["বার্ষিক রিপোর্ট বিলম্বিত হলে", "পর্যাপ্ত কমিউনিকেশন না থাকলে", "নির্ধারিত কিস্তি সময়মতো পরিশোধ না হলে", "শেয়ারহোল্ডার পরিবর্তিত হলে"],
     answer: 2
   },
   {
-    question: "How do you install a third-party module using pip?",
-    options: ["pip get module_name", "install module_name", "pip install module_name", "pip.add(module_name)"],
+    question: "কোম্পানি লাভ না করলে কারা কোন রকম লভ্যাংশ বা সুদ পায় না?",
+    options: ["প্রথম শ্রেণির পরিচালক", "সাধারণ শেয়ারগ্রহীতা", "ডিবেঞ্চার হোল্ডার", "প্রাইভেট বিনিয়োগকারী"],
+    answer: 1
+  },
+  {
+    question: "ডিবেঞ্চারধারীরা কী ধরনের সুদ পায়?",
+    options: ["লভ্যাংশের পরিমাণের ওপর", "পূর্ব নির্ধারিত হারে", "সাধারণ সভার সিদ্ধান্ত অনুসারে", "পরিশোধকৃত মূলধনের অনুপাতে"],
+    answer: 1
+  },
+  {
+    question: "কোম্পানির অবসায়নের সময় কারা কোনও অর্থ ফেরত পায় না?",
+    options: ["প্রাথমিক বিনিয়োগকারী", "সাধারণ শেয়ারহোল্ডার", "অগ্রাধিকার শেয়ারহোল্ডার", "ডিবেঞ্চার হোল্ডার"],
+    answer: 1
+  },
+  {
+    question: "ডিবেঞ্চারের ডিসকাউন্ট কোন মাধ্যমে প্রকাশ করা হয়?",
+    options: ["অ্যাডজাস্টমেন্ট অ্যাকাউন্ট", "সিকিউরিটিজ প্রিমিয়াম", "পার্টনারশিপ রিজার্ভ", "বিনিয়োগ ফান্ড"],
+    answer: 1
+  },
+  {
+    question: "Debenture Allotment Account এর প্রকৃতি কী?",
+    options: ["রিয়েল অ্যাকাউন্ট", "পারসোনাল অ্যাকাউন্ট", "নমিনাল অ্যাকাউন্ট", "আয় অ্যাকাউন্ট"],
+    answer: 1
+  },
+  {
+    question: "ঋণপত্র নির্ধারিত মূল্যের চেয়ে অধিক মূল্যে ইস্যু হলে তাকে কী বলা হয়?",
+    options: ["সমহারে ঋণপত্র", "অধিহারে ঋণপত্র", "অগ্রগামী ঋণপত্র", "পুনর্মূলায়িত ঋণপত্র"],
+    answer: 1
+  },
+  {
+    question: "ঋণপত্র নির্ধারিত মূল্যের চেয়ে কম মূল্যে ইস্যু হলে তাকে কী বলা হয়?",
+    options: ["সমহারে ঋণপত্র", "অধিহারে ঋণপত্র", "অনিহারে ঋণপত্র", "মূল্যছাড়যুক্ত ঋণপত্র"],
     answer: 2
   },
   {
-    question: "Which built-in function returns user input as a string?",
-    options: ["read()", "scan()", "input()", "get()"],
+    question: "ঋণপত্র নির্ধারিত মূল্যে ইস্যু হলে তাকে কী বলা হয়?",
+    options: ["অধিহারে ঋণপত্র", "মূল্যছাড় ঋণপত্র", "সমহারে ঋণপত্র", "অতিরিক্ত ঋণপত্র"],
     answer: 2
-  }]
+  },
+  {
+    question: "কর্মচারীদের দীর্ঘমেয়াদি বৃদ্ধি প্রাপ্তিতে কোন ধরণের ঋণের প্রয়োজন হয়?",
+    options: ["স্বল্পমেয়াদি ঋণ", "চলতি মূলধনের ঋণ", "দীর্ঘমেয়াদি ঋণ", "অগ্রাধিকার ঋণ"],
+    answer: 2
+  },
+  {
+    question: "৭০০০০ টাকার মূল্যের স্থায়ী সম্পত্তির জন্য ৯০০০০ টাকার ডিবেঞ্চার ইস্যু করা হলে, কোন তহবিল হিসাবটি ডেবিট করা হয়?",
+    options: ["সঞ্চিতি হিসাব", "মুনাফা হিসাব", "সুনাম তহবিল হিসাব", "বিক্রয় লাভ হিসাব"],
+    answer: 2
+  },
+  {
+    question: "৯০০০০ টাকার মূল্যের স্থায়ী সম্পত্তির জন্য ৭০০০০ টাকার ডিবেঞ্চার ইস্যু করা হলে, কোন হিসাব ক্রেডিট করা হয়?",
+    options: ["সাধারণ তহবিল", "মূলধন সঞ্চিতি তহবিল", "লভ্যাংশ তহবিল", "সিকিউরিটিজ প্রিমিয়াম"],
+    answer: 1
+  },
+  {
+    question: "Premium on Redemption of Debenture কোন ধরনের হিসাব?",
+    options: ["রিয়েল হিসাব", "পার্সোনাল হিসাব", "নমিনাল হিসাব", "লাভ হিসাব"],
+    answer: 1
+  },
+  {
+    question: "ডিবেঞ্চার ইস্যুর পরে যেটি এক বছরের বেশি সময়ের মধ্যে ফেরত দেওয়ার কথা, সেটি কোন শ্রেণির দায়?",
+    options: ["চলতি দায়", "সম্পদ দায়", "Non-Current Liabilities", "নির্দিষ্ট দায়"],
+    answer: 2
+  },
+  {
+    question: "Securities Premium কোন শ্রেণির অ্যাকাউন্ট?",
+    options: ["রিয়েল অ্যাকাউন্ট", "নমিনাল অ্যাকাউন্ট", "পার্সোনাল অ্যাকাউন্ট", "সিকিউরিটি অ্যাকাউন্ট"],
+    answer: 1
+  },
+  {
+    question: "Discount on Issue of Debenture কোন শ্রেণির হিসাব?",
+    options: ["নমিনাল অ্যাকাউন্ট", "পার্সোনাল অ্যাকাউন্ট", "রিয়েল অ্যাকাউন্ট", "লাভ অ্যাকাউন্ট"],
+    answer: 0
+  },
+  {
+    question: "ডিবেঞ্চার কী ধরনের দায় হিসেবে বিবেচিত হয়?",
+    options: ["সম্পদ", "চলতি দায়", "স্থায়ী দায়", "তহবিল"],
+    answer: 2
+  },
+  {
+    question: "ডিবেঞ্চারের ওপর অগ্রিম অর্থ পাওয়া গেলে তাকে কী বলা হয়?",
+    options: ["Calls-in-Advance", "Calls-in-Arrear", "Premium Received", "Debenture Suspense"],
+    answer: 0
+  },
+  {
+    question: "ডিবেঞ্চার ইস্যুর সময় টাকা না পেলে সেটাকে কী বলা হয়?",
+    options: ["Subscribed Capital", "Calls-in-Arrear", "Calls-in-Advance", "Discount on Issue"],
+    answer: 1
+  },
+  {
+    question: "যখন স্থায়ী সম্পত্তির চেয়ে বেশি পরিমাণ ডিবেঞ্চার ইস্যু হয়, তখন কোন অ্যাকাউন্ট ডেবিট হয়?",
+    options: ["Profit & Loss A/c", "Goodwill A/c", "Securities Premium A/c", "Fixed Asset A/c"],
+    answer: 1
+  },
+  {
+    question: "যখন স্থায়ী সম্পত্তির চেয়ে কম পরিমাণ ডিবেঞ্চার ইস্যু হয়, তখন কোন অ্যাকাউন্ট ক্রেডিট হয়?",
+    options: ["Capital Reserve A/c", "General Reserve A/c", "Loss A/c", "Goodwill A/c"],
+    answer: 0
+  },
+  {
+    question: "অধিহারে ইস্যু করা ঋণপত্র পরিশোধের সময় কোন হিসাব ডেবিট করা হয়?",
+    options: ["Capital Reserve A/c", "Loss on Issue of Debenture A/c", "Calls-in-Arrear", "Debenture Suspense A/c"],
+    answer: 1
+  },
+  {
+    question: "অধিহারে ঋণপত্র পরিশোধ হলে কিসের ক্ষতি হয়?",
+    options: ["চলতি ক্ষতি", "ব্যবসায়িক ক্ষতি", "মূলধনী ক্ষতি", "নগদ ক্ষতি"],
+    answer: 2
+  },
+  {
+    question: "অধিহারে ঋণপত্র পরিশোধের সময় কোন হিসাব ক্রেডিট করা হয়?",
+    options: ["Loss on Issue of Debenture A/c", "Premium on Issue of Debenture A/c", "Debenture Suspense A/c", "Capital Reserve A/c"],
+    answer: 1
+  },
+  {
+    question: "কোম্পানির ক্ষতির দায়ভার কার উপর বর্তায়?",
+    options: ["পরিচালকদের উপর", "শেয়ারহোল্ডারদের উপর", "ডিবেঞ্চার হোল্ডারদের উপর", "সাধারণ ব্যবহারকারীর উপর"],
+    answer: 1
+  }
+]
 };
-let currentLesson = "";
+
+let currentLesson = "lesson1";
 let currentQuestion = 0;
 let userAnswers = [];
 
-function startLesson() {
-  const selected = document.getElementById("lessonSelect").value;
-  currentLesson = selected;
+// Load progress from localStorage
+function loadProgress(preserveQuestion = false) {
+  const saved = localStorage.getItem(`quiz_progress_${currentLesson}`);
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    if (!preserveQuestion) currentQuestion = parsed.currentQuestion || 0;
+    userAnswers = parsed.userAnswers || [];
+  }
+}
+
+// Save progress to localStorage
+function saveProgress() {
+  localStorage.setItem(
+    `quiz_progress_${currentLesson}`,
+    JSON.stringify({
+      currentQuestion,
+      userAnswers
+    })
+  );
+}
+
+// Clear localStorage and progress
+function clearProgress() {
+  localStorage.removeItem(`quiz_progress_${currentLesson}`);
+}
+
+// Start Over button handler
+function startOver() {
+  clearProgress();
   currentQuestion = 0;
   userAnswers = [];
   document.getElementById("results").innerHTML = "";
-  loadQuiz(selected);
+  loadQuiz(currentLesson);
 }
 
-function loadQuiz(lesson) {
+// Load quiz questions and display the quiz interface
+function loadQuiz(lesson, preserveQuestion = false) {
+  currentLesson = lesson;
   const data = quizzes[lesson];
   const quizContainer = document.getElementById("quiz");
+  const resultsDiv = document.getElementById("results");
+
+  loadProgress(preserveQuestion);
 
   function showQuestion(index) {
     const q = data[index];
+
     quizContainer.innerHTML = `
       <div class="question">
         <p>${index + 1}. ${q.question}</p>
@@ -563,8 +909,15 @@ function loadQuiz(lesson) {
         <button id="nextBtn" style="display:none;">
           ${index < data.length - 1 ? "Next" : "Submit"}
         </button>
+        <button onclick="startOver()" style="margin-top: 10px;">⟲ Start Over</button>
       </div>
     `;
+
+    setTimeout(() => {
+      quizContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+
+    generateAnalysis(data.length);
 
     const options = document.querySelectorAll('input[name="option"]');
     const feedback = document.getElementById("feedback");
@@ -579,16 +932,19 @@ function loadQuiz(lesson) {
         options.forEach((o) => (o.disabled = true));
 
         feedback.innerHTML = `
-          <p>${correct ? "✅ Sothik uttar!" : "❌ Bhul korechho!"}<br>
+          <p>${correct ? "✅ Yup Yup👌" : "❌ Bhul.... try again👉👈"}<br>
           <strong>Correct answer:</strong> ${q.options[q.answer]}</p>
         `;
 
+        saveProgress();
+        generateAnalysis(data.length);
         nextBtn.style.display = "inline-block";
       };
     });
 
     nextBtn.onclick = () => {
       currentQuestion++;
+      saveProgress(); // Save progress when navigating
       if (currentQuestion < data.length) {
         showQuestion(currentQuestion);
       } else {
@@ -598,7 +954,6 @@ function loadQuiz(lesson) {
   }
 
   function showResults() {
-    const resultsDiv = document.getElementById("results");
     let score = 0;
     quizContainer.innerHTML = "";
     resultsDiv.innerHTML = `<h2>Results for ${lesson.toUpperCase()}</h2>`;
@@ -627,6 +982,38 @@ function loadQuiz(lesson) {
 
     resultsDiv.innerHTML =
       `<h2>You scored ${score}/${data.length}</h2>` + resultsDiv.innerHTML;
+    clearProgress();
+  }
+
+  // Analysis Panel (dynamic progress tracking)
+  function generateAnalysis(totalQuestions) {
+    const box = document.getElementById("analysis-box");
+    if (!box) return;
+
+    box.innerHTML = "";
+    for (let i = 0; i < totalQuestions; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i + 1;
+
+      const userAns = userAnswers[i];
+      if (userAns === undefined) {
+        btn.classList.add("unanswered");
+        btn.title = "Unanswered";
+      } else if (userAns === quizzes[currentLesson][i].answer) {
+        btn.classList.add("correct");
+        btn.title = "Correct";
+      } else {
+        btn.classList.add("wrong");
+        btn.title = "Incorrect";
+      }
+
+      btn.onclick = () => {
+        currentQuestion = i;
+        loadQuiz(currentLesson, true); // 🟢 preserve currentQuestion!
+      };
+
+      box.appendChild(btn);
+    }
   }
 
   showQuestion(currentQuestion);
